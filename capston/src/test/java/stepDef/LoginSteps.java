@@ -22,7 +22,8 @@ public class LoginSteps {
 		this.hooks = hook;
 		this.driver = hooks.getDriver();
 		this.lPage = new loginPage(driver);
-		test = reports.createTest("Login test");
+		System.out.println("TESTING...");
+//		test = reports.createTest("Login test");
 	}
 
 	@Given("The user launch the application URL")
@@ -36,12 +37,27 @@ public class LoginSteps {
 		ReadDataFromExcelFile r = new ReadDataFromExcelFile();
 		Object[][] username = r.getLoginData();
 		
-		lPage.userLoginWithValidCredentails(username[0][0],username[0][1]);
+		for(int i=0;i<username.length;i++) {
+			lPage.userLoginWithValidCredentails(username[i][0],username[i][1]);			
+		}
 	}
 
 	@When("The user validate the page title {string}")
 	public void userValidatePageTitle(String pageTitle) {
 		lPage.checkPagetitle(pageTitle);
+	}
+	
+	public static void main(String[] args) {
+		MyHooks myHooks = new MyHooks();
+		myHooks.tearUp();
+		LoginSteps ls = new LoginSteps(myHooks);
+		ls.userLaunchApplicationURL();
+		try {
+			ls.enterValidCredentials();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

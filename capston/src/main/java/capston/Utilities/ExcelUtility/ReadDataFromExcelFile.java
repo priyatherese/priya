@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
 public class ReadDataFromExcelFile {
 
 	
-	 String fPath = "/Volumes/Renuka/Training_Materials/SA2411063_CapstoneProjects/capston/ExcelFile/LoginData.xlsx" ;
+	 String fPath = "C:\\Users\\Jim\\eclipse-workspace\\SA2411063\\capston\\ExcelFile\\LoginData.xlsx" ;
 	 File file;
 	 FileInputStream fis;
 	 XSSFWorkbook wb;
