@@ -38,7 +38,7 @@ public class LoginSteps {
 		Object[][] username = r.getLoginData();
 		
 		for(int i=0;i<username.length;i++) {
-			lPage.userLoginWithValidCredentails(username[i][0],username[i][1]);			
+			lPage.userLoginWithValidCredentails(username[i][0],username[i][1]);		
 		}
 	}
 

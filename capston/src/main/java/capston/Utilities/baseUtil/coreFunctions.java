@@ -20,7 +20,7 @@ import capston.Utilities.reports.Extentreporter;
 
 public class coreFunctions {
 
-	WebDriver driver;
+	protected WebDriver driver;
 
 	public coreFunctions(WebDriver driver) {
 		this.driver = driver;

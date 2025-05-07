@@ -10,7 +10,7 @@ public class loginPage extends coreFunctions {
 
 	public loginPage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	
 	}
 
 	public void navigate() {
@@ -28,8 +28,6 @@ public class loginPage extends coreFunctions {
 		validateTitle(pageTitle);
 	}
 
-//	public void userLoginWithValidCredentails(Object object, Object object2) {
-//		// TODO Auto-generated method stub
 //		
 //	}
 }
